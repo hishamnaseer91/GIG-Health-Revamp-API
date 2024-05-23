@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:tns="/com/mni/mednext/services/model/enrolment/modules/common/types/" xmlns:ns1="/com/mni/mednext/services/model/enrolment/queries/common/" xmlns:ns0="http://xmlns.oracle.com/adf/svc/errors/" elementFormDefault="qualified" targetNamespace="/com/mni/mednext/services/model/enrolment/modules/common/types/" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import schemaLocation="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/com/mni/mednext/services/model/enrolment/queries/common/LifeAddressRequestSDO.xsd" namespace="/com/mni/mednext/services/model/enrolment/queries/common/" />
+  <import schemaLocation="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/com/mni/mednext/services/model/enrolment/queries/common/LifeAddressResponseSDO.xsd" namespace="/com/mni/mednext/services/model/enrolment/queries/common/" />
+  <import schemaLocation="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/META-INF/wsdl/ServiceException.xsd" namespace="http://xmlns.oracle.com/adf/svc/errors/" />
+  <element name="createLifeAddress">
+    <complexType>
+      <sequence>
+        <element name="row" type="ns1:LifeAddressRequestSDO" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createLifeAddressResponse">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns1:LifeAddressResponseSDO" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateLifeAddress">
+    <complexType>
+      <sequence>
+        <element name="row" type="ns1:LifeAddressRequestSDO" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateLifeAddressResponse">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns1:LifeAddressResponseSDO" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteLifeAddress">
+    <complexType>
+      <sequence>
+        <element name="MemberNumber" type="decimal" />
+        <element name="AddressTypeId" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteLifeAddressResponse">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns1:LifeAddressResponseSDO" />
+      </sequence>
+    </complexType>
+  </element>
+</schema>

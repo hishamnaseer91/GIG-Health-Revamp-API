@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="/com/mni/mednext/services/model/enrolment/queries/common/" xmlns:sdoJava="commonj.sdo/java" elementFormDefault="qualified" targetNamespace="/com/mni/mednext/services/model/enrolment/queries/common/" sdoJava:package="com.mni.mednext.services.model.enrolment.queries.common" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/xml/sdoJava.xsd" namespace="commonj.sdo/java" />
+  <xsd:annotation>
+    <xsd:documentation>
+      <name xmlns="/com/mni/mednext/services/model/enrolment/queries/common/">Life Address Input</name>
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="LifeAddressRequestSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+          <attribute>MemberNumber</attribute>
+        </key>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="MemberNumber" nillable="true" type="xsd:decimal" />
+      <xsd:element minOccurs="0" name="AddressTypeId" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="MailingIndicator" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="AddressText" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="ZipCode" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PoBox" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="CountryCode" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="RegionCode" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="DistrictCode" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="AdministrativeUnitCode" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="CityCode" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PhoneNumber1" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PhoneNumber2" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PhoneNumber3" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PhoneNumber4" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="Email1" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="Email2" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="FaxNumber" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="WebsiteURL" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="Username" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="lifeAddressRequestSDO" type="LifeAddressRequestSDO" />
+</xsd:schema>

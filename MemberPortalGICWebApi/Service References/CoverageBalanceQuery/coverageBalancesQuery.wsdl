@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://mednext/CoverageBalancesQuery.wsdl" xmlns:WL5G3N1="http://mednext/CoverageBalancesQuery.wsdl/types/" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="" name="coverageBalancesQuery" targetNamespace="http://mednext/CoverageBalancesQuery.wsdl" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://mednext/CoverageBalancesQuery.wsdl/types/" xmlns:tns0="http://mednext/CoverageBalancesQuery.wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://mednext/CoverageBalancesQuery.wsdl/types/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified" targetNamespace="http://mednext/CoverageBalancesQuery.wsdl/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="coveragebalancesqueryElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="policyNumber" nillable="true" type="xsd:decimal" />
+            <xsd:element name="memberNumber" nillable="true" type="xsd:decimal" />
+            <xsd:element name="planNumber" nillable="true" type="xsd:decimal" />
+            <xsd:element name="benefitNumber" nillable="true" type="xsd:decimal" />
+            <xsd:element name="claimNumber" nillable="true" type="xsd:decimal" />
+            <xsd:element name="languageId" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="coveragebalancesqueryResponseElement">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="result" nillable="true" type="tns0:CoverageBalancesQueryUser_coveragebalancesquery_Out" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="CoverageBalancesQueryUser_coveragebalancesquery_Out">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="coveragebalancesouttabOut" nillable="true" type="tns0:WsCoverageBalancesOutRecUser" />
+          <xsd:element name="statusoutputrecOut" nillable="true" type="tns0:WsStatusOutputRecUser" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WsCoverageBalancesOutRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsCoverageBalancesOutRecBase">
+            <xsd:sequence>
+              <xsd:element name="insuranceCompanyNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="packageNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="packageDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="planNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="planDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="benefitNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="benefitDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="groupingTab" nillable="true" type="tns0:WsGroupingTab" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsGroupingTab">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="array" nillable="true" type="tns0:WsGroupingRecUser" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WsGroupingRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsGroupingRecBase">
+            <xsd:sequence>
+              <xsd:element name="groupingNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="groupingDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="criterionTab" nillable="true" type="tns0:WsCriterionTab" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsCriterionTab">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="array" nillable="true" type="tns0:WsCriterionRecUser" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WsCriterionRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsCriterionRecBase">
+            <xsd:sequence>
+              <xsd:element name="criterionNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="criterionDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="policyAccumulatorTab" nillable="true" type="tns0:WsPolicyAccumulatorTab" />
+              <xsd:element name="accumulatorTab" nillable="true" type="tns0:WsAccumulatorTab" />
+              <xsd:element name="ruleTab" nillable="true" type="tns0:WsRuleTab" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleTab">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="array" nillable="true" type="tns0:WsRuleRecUser" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleRecBase">
+            <xsd:sequence>
+              <xsd:element name="ruleNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="ruleDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleTypeId" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleTypeIdDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelId" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelIdDesc" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelValue" nillable="true" type="xsd:decimal" />
+              <xsd:element name="appliedLevelValueDesc" nillable="true" type="xsd:string" />
+              <xsd:element name="customFieldAffected" nillable="true" type="xsd:string" />
+              <xsd:element name="waitingPeriodRuleRec" nillable="true" type="tns0:WsWaitingPeriodRuleRecUser" />
+              <xsd:element name="copayRuleRec" nillable="true" type="tns0:WsCopayRuleRecUser" />
+              <xsd:element name="limitRuleRec" nillable="true" type="tns0:WsLimitRuleRecUser" />
+              <xsd:element name="deductibleRuleRec" nillable="true" type="tns0:WsDeductibleRuleRecUser" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsWaitingPeriodRuleRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsWaitingPeriodRuleRecBase">
+            <xsd:sequence>
+              <xsd:element name="ruleNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="periodTypeId" nillable="true" type="xsd:string" />
+              <xsd:element name="periodTypeDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="period" nillable="true" type="xsd:decimal" />
+              <xsd:element name="periodIdentifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="periodIdentifierDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="baseDateTypeId" nillable="true" type="xsd:string" />
+              <xsd:element name="baseDateTypeDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="waiverDate" nillable="true" type="xsd:dateTime" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsWaitingPeriodRuleRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsCopayRuleRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsCopayRuleRecBase">
+            <xsd:sequence>
+              <xsd:element name="ruleNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="currencyId" nillable="true" type="xsd:string" />
+              <xsd:element name="currencyDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="extentNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="extentDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="copayPercentage" nillable="true" type="xsd:decimal" />
+              <xsd:element name="minimumAmount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="maximumAmount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="period" nillable="true" type="xsd:decimal" />
+              <xsd:element name="periodIdentifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="periodIdentifierDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleBalanceAmtRec" nillable="true" type="tns0:WsRuleBalanceAmtRecUser" />
+              <xsd:element name="ruleBalanceAmtQtyRec" nillable="true" type="tns0:WsRuleBalanceAmtQtyRecUser" />
+              <xsd:element name="ruleBalanceQtyRec" nillable="true" type="tns0:WsRuleBalanceQtyRecUser" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleBalanceAmtRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleBalanceAmtRecBase">
+            <xsd:sequence>
+              <xsd:element name="usedAmount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="remainingAmount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="previousAmount" nillable="true" type="xsd:decimal" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleBalanceAmtRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleBalanceAmtQtyRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleBalanceAmtQtyRecBase">
+            <xsd:sequence>
+              <xsd:element name="usedAmount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="remainingAmount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="previousAmount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="usedQuantity" nillable="true" type="xsd:decimal" />
+              <xsd:element name="remainingQuantity" nillable="true" type="xsd:decimal" />
+              <xsd:element name="previousQuantity" nillable="true" type="xsd:decimal" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleBalanceAmtQtyRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleBalanceQtyRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleBalanceQtyRecBase">
+            <xsd:sequence>
+              <xsd:element name="usedQuantity" nillable="true" type="xsd:decimal" />
+              <xsd:element name="remainingQuantity" nillable="true" type="xsd:decimal" />
+              <xsd:element name="previousQuantity" nillable="true" type="xsd:decimal" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleBalanceQtyRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsCopayRuleRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsLimitRuleRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsLimitRuleRecBase">
+            <xsd:sequence>
+              <xsd:element name="ruleNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="limitTypeId" nillable="true" type="xsd:string" />
+              <xsd:element name="limitTypeDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleDefinitionAmtRec" nillable="true" type="tns0:WsRuleDefinitionAmtRecUser" />
+              <xsd:element name="ruleDefinitionAmtQlfRec" nillable="true" type="tns0:WsRuleDefinitionAmtQlfRecUser" />
+              <xsd:element name="ruleDefinitionAmtQtyRec" nillable="true" type="tns0:WsRuleDefinitionAmtQtyRecUser" />
+              <xsd:element name="ruleDefinitionQtyRec" nillable="true" type="tns0:WsRuleDefinitionQtyRecUser" />
+              <xsd:element name="ruleBalanceAmtRec" nillable="true" type="tns0:WsRuleBalanceAmtRecUser" />
+              <xsd:element name="ruleBalanceQtyRec" nillable="true" type="tns0:WsRuleBalanceQtyRecUser" />
+              <xsd:element name="ruleBalanceAmtQtyRec" nillable="true" type="tns0:WsRuleBalanceAmtQtyRecUser" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionAmtRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleDefinitionAmtRecBase">
+            <xsd:sequence>
+              <xsd:element name="amount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="currencyId" nillable="true" type="xsd:string" />
+              <xsd:element name="currencyDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="extentNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="extentDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="period" nillable="true" type="xsd:decimal" />
+              <xsd:element name="periodIdentifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="periodIdentifierDescription" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionAmtRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionQtyRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleDefinitionQtyRecBase">
+            <xsd:sequence>
+              <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+              <xsd:element name="quantityQualifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="qualifierDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="extentNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="extentDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="period" nillable="true" type="xsd:decimal" />
+              <xsd:element name="periodIdentifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="periodIdentifierDescription" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionQtyRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionAmtQtyRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleDefinitionAmtQtyRecBase">
+            <xsd:sequence>
+              <xsd:element name="quantity" nillable="true" type="xsd:decimal" />
+              <xsd:element name="quantityQualifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="qualifierDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="amount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="currencyId" nillable="true" type="xsd:string" />
+              <xsd:element name="currencyDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="extentNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="extentDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="period" nillable="true" type="xsd:decimal" />
+              <xsd:element name="periodIdentifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="periodIdentifierDescription" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionAmtQtyRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionAmtQlfRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsRuleDefinitionAmtQlfRecBase">
+            <xsd:sequence>
+              <xsd:element name="extentNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="extentDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="amount" nillable="true" type="xsd:decimal" />
+              <xsd:element name="currencyId" nillable="true" type="xsd:string" />
+              <xsd:element name="currencyDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="quantityQualifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="qualifierDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="period" nillable="true" type="xsd:decimal" />
+              <xsd:element name="periodIdentifierId" nillable="true" type="xsd:string" />
+              <xsd:element name="periodIdentifierDescription" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleDefinitionAmtQlfRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsLimitRuleRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsDeductibleRuleRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsDeductibleRuleRecBase">
+            <xsd:sequence>
+              <xsd:element name="ruleNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="deductibleTypeId" nillable="true" type="xsd:string" />
+              <xsd:element name="deductibleTypeDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleDefinitionAmtRec" nillable="true" type="tns0:WsRuleDefinitionAmtRecUser" />
+              <xsd:element name="ruleDefinitionAmtQlfRec" nillable="true" type="tns0:WsRuleDefinitionAmtQlfRecUser" />
+              <xsd:element name="ruleDefinitionAmtQtyRec" nillable="true" type="tns0:WsRuleDefinitionAmtQtyRecUser" />
+              <xsd:element name="ruleDefinitionQtyRec" nillable="true" type="tns0:WsRuleDefinitionQtyRecUser" />
+              <xsd:element name="ruleBalanceAmtRec" nillable="true" type="tns0:WsRuleBalanceAmtRecUser" />
+              <xsd:element name="ruleBalanceAmtQtyRec" nillable="true" type="tns0:WsRuleBalanceAmtQtyRecUser" />
+              <xsd:element name="ruleBalanceQtyRec" nillable="true" type="tns0:WsRuleBalanceQtyRecUser" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsDeductibleRuleRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsRuleRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsPolicyAccumulatorTab">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="array" nillable="true" type="tns0:WsPolicyAccumulatorRecUser" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WsPolicyAccumulatorRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsPolicyAccumulatorRecBase">
+            <xsd:sequence>
+              <xsd:element name="ruleNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="ruleDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleTypeId" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleTypeIdDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelId" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelIdDesc" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelValue" nillable="true" type="xsd:decimal" />
+              <xsd:element name="appliedLevelValueDesc" nillable="true" type="xsd:string" />
+              <xsd:element name="customFieldAffected" nillable="true" type="xsd:string" />
+              <xsd:element name="waitingPeriodRuleRec" nillable="true" type="tns0:WsWaitingPeriodRuleRecUser" />
+              <xsd:element name="copayRuleRec" nillable="true" type="tns0:WsCopayRuleRecUser" />
+              <xsd:element name="limitRuleRec" nillable="true" type="tns0:WsLimitRuleRecUser" />
+              <xsd:element name="deductibleRuleRec" nillable="true" type="tns0:WsDeductibleRuleRecUser" />
+              <xsd:element name="accumulatorTab" nillable="true" type="tns0:WsAccumulatorTab" />
+              <xsd:element name="ruleTab" nillable="true" type="tns0:WsRuleTab" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsAccumulatorTab">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="array" nillable="true" type="tns0:WsAccumulatorRecUser" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WsAccumulatorRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsAccumulatorRecBase">
+            <xsd:sequence>
+              <xsd:element name="ruleNumber" nillable="true" type="xsd:decimal" />
+              <xsd:element name="ruleDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleTypeId" nillable="true" type="xsd:string" />
+              <xsd:element name="ruleTypeIdDescription" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelId" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelIdDesc" nillable="true" type="xsd:string" />
+              <xsd:element name="appliedLevelValue" nillable="true" type="xsd:decimal" />
+              <xsd:element name="appliedLevelValueDesc" nillable="true" type="xsd:string" />
+              <xsd:element name="customFieldAffected" nillable="true" type="xsd:string" />
+              <xsd:element name="waitingPeriodRuleRec" nillable="true" type="tns0:WsWaitingPeriodRuleRecUser" />
+              <xsd:element name="copayRuleRec" nillable="true" type="tns0:WsCopayRuleRecUser" />
+              <xsd:element name="limitRuleRec" nillable="true" type="tns0:WsLimitRuleRecUser" />
+              <xsd:element name="deductibleRuleRec" nillable="true" type="tns0:WsDeductibleRuleRecUser" />
+              <xsd:element name="ruleTab" nillable="true" type="tns0:WsRuleTab" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsAccumulatorRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsPolicyAccumulatorRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsCriterionRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsGroupingRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsCoverageBalancesOutRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WsStatusOutputRecUser">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns0:WsStatusOutputRecBase">
+            <xsd:sequence>
+              <xsd:element name="statusCode" nillable="true" type="xsd:decimal" />
+              <xsd:element name="resultCode" nillable="true" type="xsd:decimal" />
+              <xsd:element name="resultMessage" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WsStatusOutputRecBase">
+        <xsd:sequence />
+      </xsd:complexType>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="CoverageBalancesQuery_coveragebalancesquery">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:coveragebalancesqueryElement" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="CoverageBalancesQuery_coveragebalancesqueryResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:coveragebalancesqueryResponseElement" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="coverageBalancesQuery">
+    <WL5G3N0:operation name="coveragebalancesquery">
+      <WL5G3N0:input message="WL5G3N2:CoverageBalancesQuery_coveragebalancesquery" />
+      <WL5G3N0:output message="WL5G3N2:CoverageBalancesQuery_coveragebalancesqueryResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="coverageBalancesQuerySoapHttp" type="WL5G3N2:coverageBalancesQuery">
+    <WL5G3N3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="coveragebalancesquery">
+      <WL5G3N3:operation soapAction="http://mednext/CoverageBalancesQuery.wsdl/coveragebalancesquery" />
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="coverageBalancesQuery">
+    <WL5G3N0:port name="coverageBalancesQuerySoapHttpPort" binding="WL5G3N2:coverageBalancesQuerySoapHttp">
+      <WL5G3N3:address location="http://betawsmednext.gulfins.com.kw:8001/coverageBalancesQuery/coverageBalancesQuerySoapHttpPort" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

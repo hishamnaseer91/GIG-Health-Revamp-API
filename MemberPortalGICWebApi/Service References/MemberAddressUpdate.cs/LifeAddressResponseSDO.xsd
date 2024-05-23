@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="/com/mni/mednext/services/model/enrolment/queries/common/" xmlns:sdoJava="commonj.sdo/java" elementFormDefault="qualified" targetNamespace="/com/mni/mednext/services/model/enrolment/queries/common/" sdoJava:package="com.mni.mednext.services.model.enrolment.queries.common" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/xml/sdoJava.xsd" namespace="commonj.sdo/java" />
+  <xsd:include schemaLocation="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/com/mni/mednext/services/model/enrolment/queries/common/LifeAddressRequestSDO.xsd" />
+  <xsd:annotation>
+    <xsd:documentation>
+      <name xmlns="/com/mni/mednext/services/model/enrolment/queries/common/">Life Address Response</name>
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="LifeAddressResponseSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+          <attribute>LifeNbr</attribute>
+        </key>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="LifeAddressRequestSDO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="AddressNumber" nillable="true" type="xsd:decimal" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="lifeAddressResponseSDO" type="LifeAddressResponseSDO" />
+</xsd:schema>

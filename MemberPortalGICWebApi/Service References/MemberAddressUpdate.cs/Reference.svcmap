@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5767f787-18f1-447a-83a3-74f83086b0cd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceException.xsd" MetadataType="Schema" ID="0a4224a2-33aa-41c0-91fc-e73f551a93fd" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/META-INF/wsdl/ServiceException.xsd" />
+    <MetadataFile FileName="LifeAdressDS.xsd" MetadataType="Schema" ID="9d59d441-8587-4799-a095-5e02f2223f51" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/com/mni/mednext/services/model/enrolment/modules/common/serviceinterface/LifeAdressDS.xsd" />
+    <MetadataFile FileName="ServiceException.wsdl" MetadataType="Wsdl" ID="ffe20522-0c71-485e-aafb-5579dae8f802" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?WSDL=/META-INF/wsdl/ServiceException.wsdl" />
+    <MetadataFile FileName="sdoModel.xsd" MetadataType="Schema" ID="e134aa7e-d16c-4930-8614-ea53c7456e94" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/xml/sdoModel.xsd" />
+    <MetadataFile FileName="LifeAddressRequestSDO.xsd" MetadataType="Schema" ID="61ffa71d-18eb-426f-b628-3d283f35cc95" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/com/mni/mednext/services/model/enrolment/queries/common/LifeAddressRequestSDO.xsd" />
+    <MetadataFile FileName="sdoJava.xsd" MetadataType="Schema" ID="1a9e0240-e1fe-4b56-b7f4-1aacf71ac03f" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/xml/sdoJava.xsd" />
+    <MetadataFile FileName="datagraph.xsd" MetadataType="Schema" ID="ec136a59-0085-49de-a2aa-c3840cde5208" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/xml/datagraph.xsd" />
+    <MetadataFile FileName="LifeAdressDS.wsdl" MetadataType="Wsdl" ID="390023d4-b390-45c9-bc96-10388a9b478a" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?wsdl" />
+    <MetadataFile FileName="LifeAddressResponseSDO.xsd" MetadataType="Schema" ID="51fc8ce9-0739-424a-84b2-b7215ce0be48" SourceId="1" SourceUrl="http://172.20.8.44:8001/MedNeXtWebServices-Model/LifeAdressDS?XSD=/com/mni/mednext/services/model/enrolment/queries/common/LifeAddressResponseSDO.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
